@@ -34,17 +34,13 @@ def makeWebhookResult(req):
     result = req.get("result")
     parameters = result.get("parameters")
     zone = parameters.get("shipping-zone")
-
     transportapi = '5e8409e5f9cd8ef287468355ffd25096'
-	appid = 'd50cb982'
-	url = 'http://transportapi.com/v3/uk/places.json?query=euston&type=train_station&app_id='+appid+'&app_key='+transportapi
-
-	html = urlopen(url).read().decode('utf8')
-	obj = json.loads(html)
-	test = obj['member'][0]
-
+    appid = 'd50cb982'
+    url = 'http://transportapi.com/v3/uk/places.json?query=euston&type=train_station&app_id='+appid+'&app_key='+transportapi
+    html = urlopen(url).read().decode('utf8')
+    obj = json.loads(html)
+    test = obj['member'][0]
     cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
-
     speech = "The cost of shipping to " + zone + " is " + str(test[zone]) + " euros."
 
     print("Response:")
