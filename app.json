@@ -4,14 +4,6 @@
   "repository": "https://github.com/myAIAccount/test",
   "logo": "https://console.api.ai/api-client/assets/img/logo-black.png",
   "keywords": ["api.ai", "slack", "natural language"],
-  "env": {
-    "accesstoken": {
-      "description": "Client access token for Api.ai",
-      "value": ""
-    },
-    "slackkey": {
-      "description": "Slack bot user API token",
-      "value": ""
-    }
-  }
+  
+  
 }
