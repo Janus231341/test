@@ -1,7 +1,17 @@
 {
-  "name": "API.AI Shipping Costs Webhook",
-  "description": "API.AI Shipping Costs Webhook Sapmple",
-  "repository": "https://github.com/svet4/shipping-costs-sample",
-  "logo": "http://xvir.github.io/img/apiai.png",
-  "keywords": ["api.ai", "natural language"]
+  "name": "API.AI test for webhook",
+  "description": "Api.ai Slack integration allows you to create Slack bots with natural language understanding based on Api.ai technology.",
+  "repository": "https://github.com/myAIAccount/test",
+  "logo": "https://console.api.ai/api-client/assets/img/logo-black.png",
+  "keywords": ["api.ai", "slack", "natural language"],
+  "env": {
+    "accesstoken": {
+      "description": "Client access token for Api.ai",
+      "value": ""
+    },
+    "slackkey": {
+      "description": "Slack bot user API token",
+      "value": ""
+    }
+  }
 }
