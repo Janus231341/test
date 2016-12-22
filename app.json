@@ -3,4 +3,6 @@
   "description": "Api.ai Slack integration allows you to create Slack bots with natural language understanding based on Api.ai technology.",
   "repository": "https://github.com/myAIAccount/test",
   "logo": "https://console.api.ai/api-client/assets/img/logo-black.png",
+  "keywords": ["api.ai", "slack", "natural language"],
+
 }
