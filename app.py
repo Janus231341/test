@@ -24,16 +24,17 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "transport.test":
-        return{}
-    result = req.get("result")
-    parameters = result.get("parameters")
-    location = parameters.get("location")
-
     transportapi = '5e8409e5f9cd8ef287468355ffd25096'
     appid = 'd50cb982'
-    baseURL = "http://transportapi.com/v3/uk/places.json?query=" + location + "&type=train_station&app_id=" + appid + '&app_key='+transportapi
-    print(baseURL)
+    result = req.get("result")
+    if result.get("action") == "transport.test":
+        parameters = result.get("parameters")
+        location = parameters.get("location")
+        transportType = parameters.get("type")
+        baseURL = "http://transportapi.com/v3/uk/places.json?query=" + location + "&type=" + transportType + "&app_id=" + appid + '&app_key=' + transportapi
+        print(baseURL)
+    else:
+        return{}
     html = urllib.urlopen(baseURL).read().decode('utf8')
     obj = json.loads(html)
 
