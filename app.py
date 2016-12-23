@@ -37,7 +37,7 @@ def makeWebhookResult(req):
     html = urllib.urlopen(baseURL).read().decode('utf8')
     obj = json.loads(html)
 
-    speech = "There is a station at longitude " + obj['member'][0]['longitude'] + "and latitude " + obj['member'][0]['latitude']
+    speech = "There is a station at longitude " + str(obj['member'][0]['longitude']) + "and latitude " + str(obj['member'][0]['latitude'])
 
     print(speech)
     return {
