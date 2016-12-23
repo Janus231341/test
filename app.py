@@ -34,7 +34,7 @@ def makeWebhookResult(req):
     appid = 'd50cb982'
     baseURL = "http://transportapi.com/v3/uk/places.json?query=" + location + "&type=train_station&app_id=" + appid + '&app_key='+transportapi
     print(baseURL)
-    html = urlopen(baseURL).read().decode('utf8')
+    html = urllib.urlopen(baseURL).read().decode('utf8')
     obj = json.loads(html)
 
     speech = "There is a station at longitude " + obj['member'][0]['logitude'] + "and latitude " + obj['member'][0]['latitude']
